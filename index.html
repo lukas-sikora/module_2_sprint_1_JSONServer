@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LUKASZ SIKORA MOD2 SPRINT_1_API</title>
+  </head>
+  <body>
+    <header>
+      <div id="filter-wrapper">
+        <label
+          >Filtry:
+          <input id="search" type="text" placeholder="Wyszukaj po nazwie..."
+        /></label>
+        <label><input type="radio" name="status" value="alive" />Żywy</label>
+        <label><input type="radio" name="status" value="dead" />Martwy</label>
+        <label
+          ><input type="radio" name="status" value="unknow" />Nieznany</label
+        >
+      </div>
+    </header>
+    <main>
+      <div id="tile-container"></div>
+      <div id="pagination">
+          <button id="prev-page" alt="left-arrow" onclick="prevPage()">&#8592</button>
+          <button id="next-page" alt="right-arrow" onclick="nextPage()">&#8594</button>
+        </div>
+      <div id="form-wrapper">
+      <form>
+        <h1>Stwórz postać</h1>
+        <input class="form-items" id="new-character" type="text" placeholder="Nazwa postaci"></input>
+        <select class="form-items"  id="new-status">
+            <option value="alive">Żywy</option>
+            <option value="dead">Martwy</option>
+            <option value="unknow">Nieznany</option>
+        </select>
+        <input class="form-items" id="new-species" type="text" placeholder="Gatunek"></input>
+        <button class="form-items" id="create-character" onclick="addCharacter()">Stwórz</button>
+
+      </form>
+      </div>
+    </main>
+        <script src="script.js"></script>
+  </body>
+</html>
